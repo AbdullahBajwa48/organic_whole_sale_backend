@@ -1,7 +1,9 @@
-import mongoose from 'mongoose';
-import { env } from './env.js';
+// Prisma client singleton — exported for use across all controllers
+import { PrismaClient } from '@prisma/client';
+
+export const prisma = new PrismaClient();
 
 export const connectDB = async () => {
-  const conn = await mongoose.connect(env.mongoUri);
-  console.log(`MongoDB atlas connected: ${conn.connection.host}`);
+  await prisma.$connect();
+  console.log('PostgreSQL connected via Prisma');
 };
