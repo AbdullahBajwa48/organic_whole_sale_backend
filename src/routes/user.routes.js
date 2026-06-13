@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import {
-  getProfile, updateProfile, listUsers, approveUser, suspendUser,
+  getProfile, updateProfile, listUsers, activateUser, suspendUser,
   getAddresses, addAddress, updateAddress, deleteAddress
 } from '../controllers/user.controller.js';
 import { authenticate } from '../middleware/authenticate.js';
@@ -24,7 +24,7 @@ router.delete('/addresses/:id', deleteAddress);
 
 // Admin only routes
 router.get('/', authorizeRole('admin'), listUsers);
-router.patch('/:id/approve', authorizeRole('admin'), approveUser);
+router.patch('/:id/activate', authorizeRole('admin'), activateUser);
 router.patch('/:id/suspend', authorizeRole('admin'), suspendUser);
 
 export default router;

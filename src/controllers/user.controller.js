@@ -42,7 +42,7 @@ export const listUsers = asyncHandler(async (req, res) => {
   return successResponse(res, paginate(users, total, page, limit));
 });
 
-export const approveUser = asyncHandler(async (req, res) => {
+export const activateUser = asyncHandler(async (req, res) => {
   const user = await prisma.user.update({
     where: { id: req.params.id },
     data: { status: 'active' },
@@ -50,7 +50,7 @@ export const approveUser = asyncHandler(async (req, res) => {
   }).catch(() => null);
 
   if (!user) return errorResponse(res, 'USER_NOT_FOUND', 'User not found', 404);
-  return successResponse(res, user, 'User approved');
+  return successResponse(res, user, 'User activated');
 });
 
 export const suspendUser = asyncHandler(async (req, res) => {
