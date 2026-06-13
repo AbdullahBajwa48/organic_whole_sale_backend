@@ -46,7 +46,7 @@ export const register = asyncHandler(async (req, res) => {
     return errorResponse(res, 'EMAIL_SEND_FAILED', 'Could not send verification email', 500);
   }
 
-  return successResponse(res, null, 'Registration successful. Please verify your email.', 201);
+  return successResponse(res, null, 'Registration successful. Please verify your email to activate your account.', 201);
 });
 
 export const verifyEmail = asyncHandler(async (req, res) => {
@@ -66,7 +66,7 @@ export const verifyEmail = asyncHandler(async (req, res) => {
     data: { emailVerified: true, emailVerifyToken: null, emailVerifyExpires: null },
   });
 
-  return successResponse(res, null, 'Email verified. Await admin approval.');
+  return successResponse(res, null, 'Email verified successfully. You can now login.');
 });
 
 export const login = asyncHandler(async (req, res) => {

@@ -13,7 +13,6 @@ enum Role {
 }
 
 enum UserStatus {
-  pending
   active
   suspended
 }
@@ -50,7 +49,7 @@ model User {
   phone                String
   role                 Role       @default(customer)
   businessName         String
-  status               UserStatus @default(pending)
+  status               UserStatus @default(active)
   emailVerified        Boolean    @default(false)
   emailVerifyToken     String?
   emailVerifyExpires   DateTime?
