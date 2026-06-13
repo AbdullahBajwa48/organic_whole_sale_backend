@@ -11,6 +11,7 @@ const userSelect = {
 };
 
 export const getProfile = asyncHandler(async (req, res) => {
+  
   const user = await prisma.user.findUnique({ where: { id: req.user.id }, select: userSelect });
   if (!user) return errorResponse(res, 'USER_NOT_FOUND', 'User not found', 404);
   return successResponse(res, user);
