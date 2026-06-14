@@ -198,7 +198,7 @@ export default function Products() {
                 <label className="block text-sm font-medium text-gray-700 mb-2">Max Price</label>
                 <input
                   type="number"
-                  placeholder="$999"
+                  placeholder="Rs. 999"
                   value={maxPrice}
                   onChange={(e) => { setMaxPrice(e.target.value); setPage(1); }}
                   className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#3B8524]/30"
@@ -330,8 +330,8 @@ export default function Products() {
 
                     <div className="flex items-end justify-between mt-4">
                       <div>
-                        <p className="text-xl font-bold text-[#3B8524]">
-                          ${product.pricePerUnit.toFixed(2)}
+                        <p className="text-2xl font-bold text-[#3B8524]">
+                          Rs. {product.pricePerUnit.toFixed(2)}
                         </p>
                         <p className="text-xs text-gray-500">
                           per {product.unit} · Min {product.minimumOrderQty}{product.unit}

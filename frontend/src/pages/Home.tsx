@@ -228,7 +228,7 @@ export default function Home() {
           <div className="flex flex-wrap items-center justify-center gap-8 mt-12">
             <div className="flex items-center gap-2 text-sm text-gray-600">
               <Truck className="w-4 h-4 text-[#3B8524]" />
-              <span>Free shipping over $500</span>
+              <span>Free shipping over Rs. 500</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-gray-600">
               <ShieldCheck className="w-4 h-4 text-[#3B8524]" />
@@ -323,7 +323,7 @@ export default function Home() {
                   <div className="flex items-end justify-between mt-4">
                     <div>
                       <p className="text-2xl font-bold text-[#3B8524]">
-                        ${product.pricePerUnit.toFixed(2)}
+                        Rs. {product.pricePerUnit.toFixed(2)}
                       </p>
                       <p className="text-xs text-gray-500">
                         per {product.unit} &middot; Min {product.minimumOrderQty}{product.unit}
@@ -400,7 +400,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#111111] mb-4">
-              Why choose Verde?
+              Why choose Shop Herbal?
             </h2>
             <p className="text-gray-500 max-w-xl mx-auto">
               We&apos;re committed to providing the freshest organic produce while supporting sustainable farming practices.
@@ -469,7 +469,7 @@ export default function Home() {
             Ready to stock your shelves?
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Join hundreds of businesses that trust Verde for their organic produce supply.
+            Join hundreds of businesses that trust Shop Herbal for their organic produce supply.
             Create an account today and get 10% off your first order.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">

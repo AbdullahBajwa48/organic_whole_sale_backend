@@ -102,7 +102,7 @@ export default function AdminReports() {
                 <BarChart3 className="w-6 h-6 text-green-600" />
               </div>
               <div>
-                <p className="text-2xl font-bold">${totalRevenue.toFixed(2)}</p>
+                <p className="text-2xl font-bold">Rs. {totalRevenue.toFixed(2)}</p>
                 <p className="text-sm text-gray-500">Total Revenue</p>
               </div>
             </div>
@@ -166,7 +166,7 @@ export default function AdminReports() {
                       <td className="px-6 py-4 font-medium">{row.id}</td>
                       <td className="px-6 py-4 text-right">{row.totalOrders}</td>
                       <td className="px-6 py-4 text-right font-medium text-[#3B8524]">
-                        ${row.totalRevenue.toFixed(2)}
+                        Rs. {row.totalRevenue.toFixed(2)}
                       </td>
                     </tr>
                   ))

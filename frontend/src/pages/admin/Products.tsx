@@ -454,7 +454,7 @@ export default function AdminProducts() {
                       {typeof product.categoryId === 'object' ? product.categoryId.name : '-'}
                     </td>
                     <td className="px-6 py-4 text-sm font-medium">
-                      ${product.pricePerUnit.toFixed(2)} / {product.unit}
+                      Rs. {product.pricePerUnit.toFixed(2)} / {product.unit}
                     </td>
                     <td className="px-6 py-4">
                       <span className={`text-sm font-medium ${
