@@ -132,7 +132,7 @@ export default function AdminOrders() {
                       {order.items.length} items
                     </td>
                     <td className="px-6 py-4 font-medium">
-                      ${order.totalAmount.toFixed(2)}
+                      Rs. {order.totalAmount.toFixed(2)}
                     </td>
                     <td className="px-6 py-4">
                       <span className={`inline-flex px-2.5 py-0.5 rounded-full text-xs font-medium ${
